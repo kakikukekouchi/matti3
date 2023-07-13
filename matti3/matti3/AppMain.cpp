@@ -56,4 +56,29 @@
 
 ******************************************/
 
+int WINAPI WinMain(_In_HINSTANCE hinstance, _In_opt_HINSTANCE hPrevInstace, _In_LPSTR lpCmdLine, _In_int nShowCmd)
+{
+
+	//ウィンドウタイトル設定
+	SetMainWindowText("Match 3 Puzzle");
+	//ウィンドモードで起動
+	ChangWindowTMode(TRUE);
+	//画面サイズの最大サイズ,カラービット数を設定
+	SetGraphMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_COLORBIT);
+
+	//Dxライブラリ初期化処理
+	//エラーが発生したら、終了する
+	if (DxLib_Init() == D_ERROR)
+	{
+		return D_ERROR;
+	}
+
+
+//各機能の初期化処理
+	FreamControl_Initialize();   //フレームレート制限機能
+
+	Input_Initialize();          //入力制限機能
+
+
+}
 
