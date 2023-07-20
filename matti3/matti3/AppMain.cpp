@@ -87,7 +87,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstace, _I
 		return D_ERROR;
 	}
 
-	//•`‰ææ‰æ–Ê‚ğ— ‚É‚·‚é
+	//•`‰ææ‰æ–Ê‚ğ— ‚É‚·‚éS
 	SetDrawScreen(DX_SCREEN_BACK);
 
 	//•¶šƒTƒCƒY‚ğİ’è
