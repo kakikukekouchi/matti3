@@ -56,7 +56,9 @@
 
 ******************************************/
 
-int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstace, _In_ LPSTR lpCmdLine, _In_ int nShowCmd)
+int WINAPI WinMain(_In_ HINSTANCE hinstance,
+	_In_opt_ HINSTANCE hPrevInstace,
+	_In_ LPSTR lpCmdLine, _In_ int nShowCmd)
 {
 
 	//ウィンドウタイトル設定
@@ -64,7 +66,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance, _In_opt_ HINSTANCE hPrevInstace, _I
 	//ウィンドモードで起動
 	ChangeWindowMode(TRUE);
 	//画面サイズの最大サイズ,カラービット数を設定
-	SetGraphMode(SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_COLORBIT);
+	SetGraphMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32);
 
 	//Dxライブラリ初期化処理
 	//エラーが発生したら、終了する
