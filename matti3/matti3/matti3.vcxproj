@@ -132,7 +132,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AppMain.cpp" />
-    <ClCompile Include=".cpp" />
+    <ClCompile Include="GameOverScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FreamControl.h" />

@@ -32,6 +32,9 @@ int GameOverScene_Initialize(void)
 
 	GameOverFlag = FALSE;
 
+	//エラーチャック
+	if(GameOverImage==-1)
+
 }
 
 
