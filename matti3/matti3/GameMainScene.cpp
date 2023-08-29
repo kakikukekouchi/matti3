@@ -22,7 +22,7 @@ int GameScore;
 int GameLevel;
 int GameMission;
 int GameTime;
-int GameCoun;  //初期化されないようにするためのカウント
+int GameCount;  //初期化されないようにするためのカウント
 int ReStartFlag;
 
 int NumberImage[NUMBER_IMAGE_MAX];  //数字用画像

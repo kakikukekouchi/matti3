@@ -16,7 +16,7 @@
 *•Ï”éŒ¾
 *************************/
 
-int FreamTIme;
+int FreamTime;
 int NowTime;
 int Wait;
 int LastTime;
