@@ -65,23 +65,6 @@ int Input_Escape(void)
 	return ret;
 }
 
-/****************************
-*入力制御機能：入力情報所得処理(離した瞬間)
-* 引数：
-*戻り値：TRUE（入力された）、FALSE（未入力）
-*****************************/
-
-int Input_Escape(void)
-{
-	int ret = FALSE;
-
-	//ESCキーが押されたらループから抜ける
-	if (CheckHitKey(KEY_INPUT_ESCAPE))
-	{
-		ret = TRUE;
-	}
-	return ret;
-}
 
 /************************************************
 

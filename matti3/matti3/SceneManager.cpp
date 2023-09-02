@@ -42,7 +42,6 @@ GAME_MODE Next_Mode;
 *シーン管理機能：初期化処理
 * 引　数：ゲームモード情報
 * 戻り値：なし
-
 ************************************************/
 
 int SceneManager_Initialize(GAME_MODE mode)
@@ -50,19 +49,35 @@ int SceneManager_Initialize(GAME_MODE mode)
 	int Read_Error;
 
 	//シーン読み込み処理
-	//タイトル画面
-	Read_Error = TitleScene_Initialize();
-	if (Read_Error == D_ERROR)
+	switch (mode)
 	{
-		return D_ERROR;
-	}
+	case E_TITLE:
+		Read_Error = TitleScene_Initialize();
+		if (Read_Error == D_ERROR)
+		{
+			return D_ERROR;
+		}
 
-	//ゲームメイン画面
-	Read_Error = GameMainScene_Initialize();
-	if (Read_Error == D_ERROR)
-	{
-		return D_ERROR;
+		break;
+	case E_GAMEMAIN:
+		Read_Error = GameMainScene_Initialize();
+		if (Read_Error == D_ERROR)
+		{
+			return D_ERROR;
+		}
+		break;
+	case E_GAME_CLEAR:
+		break;
+	case E_GAME_OVER:
+		break;
+	case E_END:
+		break;
+	case E_MODE_MAX:
+		break;
+	default:
+		break;
 	}
+	
 
 	//ゲームクリア画面
 	Read_Error = GameClearScene_Initialize();

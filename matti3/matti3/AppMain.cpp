@@ -21,7 +21,7 @@
 #define SCREEN_HEIGHT (480)    //スクリーンサイズ(高さ)
 #define SCREEN_WIDTH (640)    //スクリーンサイズ(幅)
 #define SCREEN_COLORBIT (32)    //スクリーンカラービット
-#define SCREEN_SIZE (20)    //文字サイズ
+#define FONT_SIZE (20)    //文字サイズ
 
 
 
@@ -64,7 +64,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance,
 	//ウィンドモードで起動
 	ChangeWindowMode(TRUE);
 	//画面サイズの最大サイズ,カラービット数を設定
-	SetGraphMode(SCREEN_WIDTH, SCREEN_HEIGHT, FONT_SIZE);
+	SetGraphMode(SCREEN_WIDTH, SCREEN_HEIGHT,SCREEN_COLORBIT);
 
 	//Dxライブラリ初期化処理
 	//エラーが発生したら、終了する
@@ -117,7 +117,7 @@ int WINAPI WinMain(_In_ HINSTANCE hinstance,
 
 	}
 	//Dxライブラリ使用の終了処理
-	Dxlib_End();
+	DxLib_End();
 
 	return 0;
 
